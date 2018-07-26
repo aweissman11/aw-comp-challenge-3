@@ -1,0 +1,194 @@
+* {
+    font-family: 'Open sans', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #354052;
+  /*height: 100vh;*/
+}
+
+.fas {
+  color: gray;
+  font-size: .75em;
+  margin: 0px 10px;
+  width: 5px;
+}
+
+.icon-text {
+  font-size: .75em;
+  margin: 5px 5px;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+.profile-photo {
+  border: solid;
+  border-width: .5px;
+}
+
+.sidebar-group {
+  border: solid;
+  border-width: .5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  border: solid;
+  border-width: .5px;
+  height: 40px;
+}
+
+.page-title {
+  border: solid;
+  border-width: .5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+    border: solid;
+    border-width: .5px;
+}
+
+.title-info {
+  display: inline-block;
+}
+
+li {
+  margin-right: 10px;
+}
+
+.title-nav {
+    border: solid;
+    border-width: .5px;
+    justify-self: end;
+}
+
+.user-pages {
+    border: solid;
+    border-width: .5px;
+}
+
+.page-selection {
+    border: solid;
+    border-width: .5px;
+    margin: 30px auto 10px;
+}
+
+.summary-page {
+  height: 250px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.page-nav {
+  margin: 0 10px;
+  font-size: .65em;
+}
+
+.stats {
+    border: solid;
+    border-width: .5px;
+    width: 100%;
+    display: flex;
+    /*grid-template-columns: repeat(autofit, minmax(200px, 1fr));*/
+}
+
+.stat-charts {
+    border: solid;
+    border-width: .5px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 100%;
+}
+
+.all-fancy-graphs {
+  display: flex;
+  width: 100%;
+}
+
+.fancy-graphs {
+  width: calc(100%/3);
+}
+
+.circular-chart {
+  display: block;
+  margin: 35px auto;
+  max-width: 100px;
+  max-height: 250px;
+}
+
+.circle {
+  stroke: #4CC790;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.chart-number, .chart-text {
+  font-size: .2em;
+}
+
+.stat-label {
+  align-self: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.graph {
+    border: solid;
+    border-width: .5px;
+    /*width: 2fr;*/
+    /*justify-self: end;*/
+}
+
+.interactive-graph {
+    border: solid;
+    border-width: .5px;
+}
+
+.chart {
+  width: 120%; 
+  height: 180px;
+
+}
+
+.graph-label {
+  text-align: center;
+  margin: 0;
+}
+
+.row {
+  margin:0 !important;
+}
+
+.user-info {
+    border: solid;
+    border-width: .5px;
+}
+
+.sharing {
+    border: solid;
+    border-width: .5px;
+}
+
