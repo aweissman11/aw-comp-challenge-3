@@ -1,85 +1,77 @@
+
+      customizeChart();
+
+
+function customizeChart() {
+  console.log('works');
+  console.log($('rect').attr('fill'));
+}
     
-
-
-
-    // // Load the Visualization API and the corechart package.
-    // google.charts.load('visualization', 'current', {'packages':['corechart']});
-
-    // // Set a callback to run when the Google Visualization API is loaded.
-    // google.charts.setOnLoadCallback(drawChart);
-
-    // // Callback that creates and populates a data table,
-    // // instantiates the pie chart, passes in the data and
-    // // draws it.
-    // function drawChart() {
-
-    //   // Create the data table.
-    //   var data = new google.visualization.DataTable();
-    //   data.addColumn('string', 'Topping');
-    //   data.addColumn('number', '');
-    //   data.addRows([
-    //     ['S', 20],
-    //     ['M', 220],
-    //     ['T', 290],
-    //     ['W', 360],
-    //     ['T', 190],
-    //     ['F', 210],
-    //     ['S', 100],
-    //     ['S', 20],
-    //     ['M', 310],
-    //     ['T', 370],
-    //     ['W', 215],
-    //     ['T', 195],
-    //     ['F', 120],
-    //     ['S', 75],
-    //   ]);
-
-    //   // Set chart options
-    //   var options = {'title':'How Much Pizza I Ate Last Night',
-    //                  // 'width':350,
-    //                  // 'height':180,
-    //                  'legend': 'none',
-    //                 };
-
-    //   // Instantiate and draw our chart, passing in some options.
-    //   var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-    //   chart.draw(data, options);
-    // }
-
-    // $(window).resize(function(){
-    //   drawChart();
-    // });
-
+    var day1 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
+    var day2 = createCustomHTMLContent('Monday', '23rd', 220, 22);
+    var day3 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
+    var day4 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
+    var day5 = createCustomHTMLContent('Thursday', '26th', 190, 19);
+    var day6 = createCustomHTMLContent('Friday', '27th', 210, 21);
+    var day7 = createCustomHTMLContent('Saturday', '28th', 100, 10);    
+    var day8 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
+    var day9 = createCustomHTMLContent('Monday', '23rd', 220, 22);
+    var day10 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
+    var day11 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
+    var day12 = createCustomHTMLContent('Thursday', '26th', 190, 19);
+    var day13 = createCustomHTMLContent('Friday', '27th', 210, 21);
+    var day14 = createCustomHTMLContent('Saturday', '28th', 100, 10);
 
     google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(drawChart1);
     function drawChart1() {
       var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales'],
-            ['S', 20],
-            ['M', 220],
-            ['T', 290],
-            ['W', 360],
-            ['T', 190],
-            ['F', 210],
-            ['S', 100],
-            ['S', 20],
-            ['M', 310],
-            ['T', 370],
-            ['W', 215],
-            ['T', 195],
-            ['F', 120],
-            ['S', 75],
+        ['Day', 'applicants', {'type': 'string', 'role': 'tooltip', 'p': {'html': true}}, 'stack', {'type': 'string', 'role': 'tooltip', 'p': {'html': true}}],
+            ['S', 20, day1, 480, '<p style="display: none"></p>'],
+            ['M', 220, day2, 280, '<p style="display: none"></p>'],
+            ['T', 290, day3, 210, '<p style="display: none"></p>'],
+            ['W', 360, day4, 140, '<p style="display: none"></p>'],
+            ['T', 190, day5, 310, '<p style="display: none"></p>'],
+            ['F', 210, day6, 290, '<p style="display: none"></p>'],
+            ['S', 100, day7, 400, '<p style="display: none"></p>'],
+            ['S', 20, day8, 480, '<p style="display: none"></p>'],
+            ['M', 310, day9, 190, '<p style="display: none"></p>'],
+            ['T', 370, day10, 130, '<p style="display: none"></p>'],
+            ['W', 215, day11, 285, '<p style="display: none"></p>'],
+            ['T', 195, day12, 305, '<p style="display: none"></p>'],
+            ['F', 120, day13, 380, '<p style="display: none"></p>'],
+            ['S', 75, day14, 425, '<p style="display: none"></p>'],
       ]);
 
       var options = {
-        'legend': 'none',
+        legend: { position: 'none' },
+        colors: ['#4DBAC0', '#D9E4EA'],
+        backgroundColor: {fill: '#ECF2F6', strokeWidth: 0},
+        chartArea: {left: 40, right: 0 },
+        fontSize: '10',
+        fontName: 'Open sans',
+        tooltip: {isHtml: true},
+        bar: {groupWidth: "45%"},
+        isStacked: true,
+        vAxis: { format: 'decimal', ticks: [ 0, 100, 200, 300, 400, 500 ]},
+        // vAxis: { gridlines.units: { 0, 100, 200, 300, 400, 500 } },
      };
 
     var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
       chart.draw(data, options);
     }
 
-    $(window).resize(function(){
+
+    function createCustomHTMLContent(dayOfWeek, date, applicantTotal, interviewTotal) {
+      return '<p class="tool-tip">' + dayOfWeek + ', July ' 
+      + date + ', 2018<br /><span class="applicant-total">' + applicantTotal 
+      + '</span> Applicants / <span class="interview-total>' 
+      + interviewTotal + '</span> Interviews</p>'
+    }
+
+
+
+
+    $(document).write(function(){
       drawChart1();
     });
