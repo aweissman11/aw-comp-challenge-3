@@ -4,43 +4,46 @@
   <title>Comp-Challenge-3</title>
   <link rel="stylesheet" href="files/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
 <body>
   <nav class="sidebar">
     <div class="profile-photo">
-      <img>
+      <img class="frankie" src="files/frankie-face.png">
       <p class="username heavy">Dr. Victoria Frankenstein</p>
     </div>
     <div class="main-sidebar sidebar-group">
-      <p>Main</p>
-      <p class="icon-text"><i class="fas fa-home"></i>Home</p>
-      <p class="icon-text"><i class="fas fa-clipboard-list"></i> Jobs</p>
-      <p class="icon-text"><i class="fas fa-folder-open"></i>Resumes</p>
-      <p class="icon-text"><i class="fas fa-clipboard-check"></i>Tasks</p>
-      <p class="icon-text"><i class="fas fa-calendar-alt"></i>Calendar</p>
+      <p class="light sidebar-group-header">Main</p>
+      <p class="icon-text"><i class="fas fa-home"></i>HOME</p>
+      <p class="icon-text"><i class="fas fa-clipboard-list"></i> JOBS</p>
+      <p class="icon-text"><i class="fas fa-folder-open"></i>RESUMES</p>
+      <p class="icon-text"><i class="fas fa-clipboard-check"></i>TASKS</p>
+      <p class="icon-text"><i class="fas fa-calendar-alt"></i>CALENDAR</p>
     </div>
     <div class="admin-sidebar sidebar-group">
-      <p>Admin</p>
-      <p class="icon-text"><i class="fas fa-users"></i>Users</p>
-      <p class="icon-text"><i class="fas fa-map-marker-alt"></i>Locations</p>
-      <p class="icon-text"><i class="fas fa-chart-line"></i>Workflows</p>
-      <p class="icon-text"><i class="fas fa-chalkboard-teacher"></i>Job Boards</p>
-      <p class="icon-text"><i class="fas fa-vector-square"></i>Social</p>
+      <p class="light sidebar-group-header">Admin</p>
+      <p class="icon-text"><i class="fas fa-users"></i>USERS</p>
+      <p class="icon-text"><i class="fas fa-map-marker-alt"></i>LOCATIONS</p>
+      <p class="icon-text"><i class="fas fa-chart-line"></i>WORKFLOWS</p>
+      <p class="icon-text"><i class="fas fa-chalkboard-teacher"></i>JOB BOARDS</p>
+      <p class="icon-text"><i class="fas fa-vector-square"></i>SOCIAL</p>
     </div>
     <div class="cats-sidebar sidebar-group">
-      <p>Categories</p>
-      <p class="icon-text"><i class="fas fa-check-square"></i>Administrative</p>
-      <p class="icon-text"><i class="fas fa-square-full"></i>Design</p>
-      <p class="icon-text"><i class="fas fa-square-full"></i>Executive</p>
-      <p class="icon-text"><i class="fas fa-square-full"></i>Human Resources</p>
+      <p class="light sidebar-group-header">Categories</p>
+      <p class="icon-text"><i class="fas fa-check-square"></i>ADMINISTRATIVE</p>
+      <p class="icon-text"><i class="fas fa-square-full"></i>DESIGN</p>
+      <p class="icon-text"><i class="fas fa-square-full"></i>EXECUTIVE</p>
+      <p class="icon-text"><i class="fas fa-square-full"></i>HUMAN RESOURCES</p>
     </div>
   </nav>
   <main>
     <div class="search-bar">
-      <i class="fas fa-bars"></i>
+      <button class="sidebar-toggle">
+        <i class="fas fa-caret-left"></i>
+        <i class="fas fa-bars"></i>
+      </button>
       <i class="fas fa-search"></i>
       <input class="search-input">
       <i class="fas fa-user-plus"></i>
@@ -75,53 +78,72 @@
       <div class="summary-page">
         <div class="stats">
           <div class="stat-charts">
-            <div class="all-fancy-graphs">
-              <div class="fancy-graphs">            
-                <svg viewbox="0 0 36 36" class="circular-chart">
+            <div class="flex-wrapper">
+              <div class="single-chart">
+                <svg viewbox="0 0 36 36" class="circular-chart chart1">
+                  <path class="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
                   <path class="circle"
-                    stroke-dasharray="80, 100"
+                    stroke-dasharray="30, 100"
                     d="M18 33.9155
                       a 15.9155 15.9155 0 0 1 0 -31.831
                       a 15.9155 15.9155 0 0 1 0 31.831"
                   />
-                  <text x='18' y=20.35' class="chart-number">3154</text>
-                  <text x="10" y="20" class="chart-text">APPLICANTS</text>
+                  <text x="18" y="20.35" class="percentage">3,154</text>
+                  <text x="18" y="25" class="chart-text">APPLICANTS</text>
                 </svg>
-            </div>
-              <div class="fancy-graphs">            
-                <svg viewbox="0 0 36 36" class="circular-chart">
+              </div>
+              
+              <div class="single-chart">
+                <svg viewbox="0 0 36 36" class="circular-chart chart2">
+                  <path class="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
                   <path class="circle"
-                    stroke-dasharray="80, 100"
+                    stroke-dasharray="60, 100"
                     d="M18 33.9155
                       a 15.9155 15.9155 0 0 1 0 -31.831
                       a 15.9155 15.9155 0 0 1 0 31.831"
                   />
+                  <text x="18" y="20.35" class="percentage">1,546</text>
+                  <text x="18" y="25" class="chart-text">INTERVIEWS</text>
                 </svg>
-            </div>
-              <div class="fancy-graphs">
-                <svg viewbox="0 0 36 36" class="circular-chart">
+              </div>
+
+              <div class="single-chart">
+                <svg viewbox="0 0 36 36" class="circular-chart chart3">
+                  <path class="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
                   <path class="circle"
-                    stroke-dasharray="80, 100"
+                    stroke-dasharray="90, 100"
                     d="M18 33.9155
                       a 15.9155 15.9155 0 0 1 0 -31.831
                       a 15.9155 15.9155 0 0 1 0 31.831"
                   />
+                  <text x="18" y="20.35" class="percentage">912</text>
+                  <text x="18" y="25" class="chart-text">APPLICANTS</text>
                 </svg>
+              </div>
             </div>
-          </div>
-          <p class="stat-label light">Totals - Out of 5,231 views</p>
-          </div>
+            <p class="stat-label light">TOTALS - Out of 5,231 views</p>
         </div>
-        <div class="graph">
+        <div class="graph-box">
           <div class="interactive-graph">
             <div class="row">
               </div>
               <div class="col-md-4 col-md-offset-4">
-                <!-- <hr /> -->
               </div>
               <div class="clearfix"></div>
               <div class="col-md-6">
-                <div id="chart_div1" class="chart"></div>
+                <div id="chart_div1" class="graph"></div>
               </div>
             </div>
             <p class="graph-label light">Applicants/Day</p>
@@ -142,7 +164,7 @@
 
 
 
-  <script src="./jquery/jquery-3.2.1.js"></script>
+  <script src="jquery-v-3.3.1.js"></script>
   <script src="./scripts.js"></script>
 </body>
 </html>

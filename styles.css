@@ -6,26 +6,55 @@ body {
     box-sizing: border-box;
     margin: 0;
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 180px 1fr;
+}
+
+.light {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   background-color: #354052;
-  /*height: 100vh;*/
+  height: 100%;
+}
+
+.profile-photo {
+  text-align: center;
+}
+
+.frankie {
+  width: 80px;
+  border-radius: 100px;
+  margin-top: 30px;
+}
+
+.username {
+  font-size: .9em;
+  color: #A1ABBE;
+  margin-bottom: 30px;
+}
+
+.sidebar-group-header {
+  font-size: .75em;
+  margin: 30px 15px 10px;
+  color: #65758C;
 }
 
 .fas {
-  color: gray;
-  font-size: .75em;
-  margin: 0px 10px;
+  color: #A1ABBE;
+  font-size: 1.3em;
+  margin: 0px 20px;
   width: 5px;
 }
 
 .icon-text {
   font-size: .75em;
-  margin: 5px 5px;
+  margin: 10px 15px 15px 0;
+  color: #A1ABBE;
+  font-weight: bold;
 }
 
 h1 {
@@ -33,13 +62,13 @@ h1 {
 }
 
 .profile-photo {
-  border: solid;
+  border-bottom: solid;
   border-width: .5px;
 }
 
 .sidebar-group {
-  border: solid;
-  border-width: .5px;
+  border-bottom: solid;
+  border-width: .2px;
   display: flex;
   flex-direction: column;
 }
@@ -79,6 +108,7 @@ li {
 .user-pages {
     border: solid;
     border-width: .5px;
+    height: 100%;
 }
 
 .page-selection {
@@ -88,9 +118,10 @@ li {
 }
 
 .summary-page {
-  height: 250px;
+  background-color: #ECF2F6;
+  max-height: 100%;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .page-nav {
@@ -99,42 +130,111 @@ li {
 }
 
 .stats {
-    border: solid;
-    border-width: .5px;
-    width: 100%;
     display: flex;
-    /*grid-template-columns: repeat(autofit, minmax(200px, 1fr));*/
+    justify-content: space-between;
+    margin-left: 40px;
 }
 
 .stat-charts {
-    border: solid;
-    border-width: .5px;
     display: flex;
     flex-direction: column;
     height: 180px;
-    width: 100%;
+    width: 50vw;
 }
 
 .all-fancy-graphs {
   display: flex;
-  width: 100%;
 }
 
 .fancy-graphs {
-  width: calc(100%/3);
+  width: 130px;
+  display: flex;
+}
+
+.stat-label {
+  align-self: center;
+  text-align: center;
+  margin-bottom: -25px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  padding: 8px;
+  color: #596678;
+  font-size: .75em;
+}
+
+.graph-box {
+  width: 400px;
+  margin-right: 40px;
+}
+
+.interactive-graph {
+
+}
+
+.graph {
+  width: 400px;
+  height: 220px;
+
+}
+
+.tool-tip {
+  color: #FFFFFF;
+  background-color: #364051;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.applicant-total {
+  color: #58cdd5;
+}
+
+.interview-total {
+  color: #3ea2e0;
+}
+
+.graph-label {
+  text-align: center;
+  margin: 0;
+}
+
+/*.user-info {
+    border: solid;
+    border-width: .5px;
+}
+
+.sharing {
+    border: solid;
+    border-width: .5px;
+}*/
+
+.flex-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.single-chart {
+  width: 150px;
+  justify-content: space-around ;
 }
 
 .circular-chart {
   display: block;
-  margin: 35px auto;
-  max-width: 100px;
-  max-height: 250px;
+  margin: 10px auto;
+  max-width: 800px;
+  height: 150px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 2.2;
 }
 
 .circle {
-  stroke: #4CC790;
   fill: none;
-  stroke-width: 2.8;
+  stroke-width: 2.2;
   stroke-linecap: round;
   animation: progress 1s ease-out forwards;
 }
@@ -145,50 +245,31 @@ li {
   }
 }
 
-.chart-number, .chart-text {
+.circular-chart.chart1 .circle {
+  stroke: #46B9C1;
+}
+
+.circular-chart.chart2 .circle {
+  stroke: #1CA0EA;
+}
+
+.circular-chart.chart3 .circle {
+  stroke: #B163B3;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.chart-text {
   font-size: .2em;
+  text-anchor: middle;
 }
 
-.stat-label {
-  align-self: center;
-  text-align: center;
-  margin: 10px;
-}
+@media (max-width: 800px) {
 
-.graph {
-    border: solid;
-    border-width: .5px;
-    /*width: 2fr;*/
-    /*justify-self: end;*/
-}
-
-.interactive-graph {
-    border: solid;
-    border-width: .5px;
-}
-
-.chart {
-  width: 120%; 
-  height: 180px;
-
-}
-
-.graph-label {
-  text-align: center;
-  margin: 0;
-}
-
-.row {
-  margin:0 !important;
-}
-
-.user-info {
-    border: solid;
-    border-width: .5px;
-}
-
-.sharing {
-    border: solid;
-    border-width: .5px;
 }
 
