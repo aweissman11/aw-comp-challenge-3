@@ -1,11 +1,4 @@
 
-      customizeChart();
-
-
-function customizeChart() {
-  console.log('works');
-  console.log($('rect').attr('fill'));
-}
     
     var day1 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
     var day2 = createCustomHTMLContent('Monday', '23rd', 220, 22);
@@ -69,9 +62,25 @@ function customizeChart() {
       + interviewTotal + '</span> Interviews</p>'
     }
 
+      $('.icon-text').mouseenter(hoverEffects);
+    function hoverEffects() {
+        $( event.target ).closest('.icon-text').css("color", "#FFFFFF");
+        $( event.target ).children().css("color", "#FFFFFF");
+        $( event.target ).parent().css("border-left", "solid #26A6F7");
+        $( event.target ).parent().css( "background-color", "#303949");
+      }
+    
+      $('.icon-text').mouseout(hoverEffectsOff);
+    function hoverEffectsOff() {
+        $( event.target ).closest('.icon-text').css("color", "#A1ABBE");
+        $( event.target ).children().css("color", "#A1ABBE");
+        $( event.target ).parent().css("border-left", "none");
+        $( event.target ).parent().css( "background-color", "#354052");
+      }
+    
 
 
-
-    $(document).write(function(){
+    $(document).ready(function(){
       drawChart1();
+
     });

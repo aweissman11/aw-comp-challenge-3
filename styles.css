@@ -14,6 +14,9 @@ body {
   font-size: 1.5em;
 }
 
+
+/*Sidebar styles here*/
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -57,9 +60,42 @@ body {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 1.2em;
+.categories-text {
+  font-size: .55em;
+  margin: 10px 15px 15px 0;
+  color: #A1ABBE;
+  font-weight: bold;
 }
+
+.yellow-square {
+  color: #FED331;
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+.blue-square {
+  color: #36B1FC;
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+.red-square {
+  color: #E72263;
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+.green-square {
+  color: #19A88A;
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+
 
 .profile-photo {
   border-bottom: solid;
@@ -73,22 +109,57 @@ h1 {
   flex-direction: column;
 }
 
+
+
+/*Search bar style here*/
+
 .search-bar {
-  border: solid;
-  border-width: .5px;
-  height: 40px;
+  display: flex;
+  height: 70px;
+}
+
+.sidebar-toggle {
+  height: 100%;
+  width: 70px;
+  justify-content: center;
+}
+
+.fa-caret-left {
+  font-size: 1em;
+  margin: 0;
+  position: relative;
+  bottom: 2px;
+  color: #26A6F7;
+}
+
+.fa-bars {
+  margin: 0 14px 0 0;
+}
+
+.fa-search {
+  margin-top: 28px;
+  margin-right: 30px;
+}
+
+.search-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+
+/*Page Title Styles*/
+
+h1 {
+  font-size: 1.2em;
 }
 
 .page-title {
-  border: solid;
-  border-width: .5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .title {
-    border: solid;
-    border-width: .5px;
 }
 
 .title-info {
