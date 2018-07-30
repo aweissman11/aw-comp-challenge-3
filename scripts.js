@@ -93,9 +93,41 @@ function userIconHoverEffectsOff() {
     $( event.target ).css( "border-bottom", "solid .1px #A2AAB7"); 
   }
 
+$('.page-nav').mouseenter(pageNavHoverEffects);
+function pageNavHoverEffects() {
+    $( event.target ).closest('.page-nav').css("color", "black");
+    // $( event.target ).css( "background-color", "#26A6F7");
+    $( event.target ).css( "border-bottom", "solid 3px #26a6f7"); 
+  }
+
+// $('.sidebar-toggle').mouseout(userIconHoverEffects);
+$('.page-nav').mouseout(pageNavHoverEffectsOff);
+function pageNavHoverEffectsOff() {
+    $( event.target ).closest('.page-nav').css("color", "#A1ABBE");
+    // $( event.target ).css( "background-color", "#FFFFFF");
+    $( event.target ).css( "border-bottom", "none"); 
+  }
 
 
-// $(document).ready(function(){
-//   drawChart1();
+var sidedbarOut = false;
 
-// });
+function navControl() {
+    if (sidedbarOut == true) {
+        console.log(event.target.parentNode);
+        var sidebarDiv = $('.sidebar');
+        var mainSection = $('main');
+        sidebarDiv.css('width', '0');
+        mainSection.css('margin-left', '0');
+        sidedbarOut = !sidedbarOut;        
+    } else {
+        console.log('works');
+        console.log($('.sidebar'));
+        var sidebarDiv = $('.sidebar');
+        var mainSection = $('main');
+        sidebarDiv.css('width', '200px');
+        mainSection.css('margin-left', '200px');
+        sidedbarOut = !sidedbarOut;
+    }
+}
+
+
