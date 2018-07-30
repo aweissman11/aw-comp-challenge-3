@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Comp-Challenge-3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="files/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -9,65 +10,67 @@
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
 <body>
-  <nav class="sidebar">
+  <div class="sidebar">
     <div class="profile-photo">
       <img class="frankie" src="files/frankie-face.png">
-      <p class="username heavy">Dr. Victoria Frankenstein</p>
+      <p class="username heavy">Victoria Frankenstein<i class="fas fa-chevron-down"></i></p>
     </div>
     <div class="main-sidebar sidebar-group">
       <p class="light sidebar-group-header">Main</p>
-      <div class="hover-div"><p class="icon-text"><i class="fas fa-home"></i>HOME</p></div>
-      <div class="hover-div"><p class="icon-text"><i class="fas fa-clipboard-list"></i> JOBS</p></div>
-      <div class="hover-div"><p class="icon-text"><i class="fas fa-folder-open"></i>RESUMES</p></div>
-      <div class="hover-div"><p class="icon-text"><i class="fas fa-clipboard-check"></i>TASKS</p></div>
-      <div class="hover-div"><p class="icon-text"><i class="fas fa-calendar-alt"></i>CALENDAR</p></div>
+      <div class="hover-div"><p class="icon-text light"><i class="fas fa-home"></i>HOME</p></div>
+      <div class="hover-div"><p class="icon-text light"><i class="fas fa-clipboard-list"></i> JOBS</p></div>
+      <div class="hover-div"><p class="icon-text light"><i class="fas fa-folder-open"></i>RESUMES</p></div>
+      <div class="hover-div"><p class="icon-text light"><i class="fas fa-clipboard-check"></i>TASKS</p></div>
+      <div class="hover-div"><p class="icon-text light"><i class="fas fa-calendar-alt"></i>CALENDAR</p></div>
     </div>
     <div class="admin-sidebar sidebar-group">
       <p class="light sidebar-group-header">Admin</p>
-     <div class="hover-div"> <p class="icon-text"><i class="fas fa-users"></i>USERS</p></div>
-     <div class="hover-div"> <p class="icon-text"><i class="fas fa-map-marker-alt"></i>LOCATIONS</p></div>
-     <div class="hover-div"> <p class="icon-text"><i class="fas fa-chart-line"></i>WORKFLOWS</p></div>
-     <div class="hover-div"> <p class="icon-text"><i class="fas fa-chalkboard-teacher"></i>JOB BOARDS</p></div>
-     <div class="hover-div"> <p class="icon-text"><i class="fas fa-vector-square"></i>SOCIAL</p></div>
+     <div class="hover-div"> <p class="icon-text light"><i class="fas fa-users"></i>USERS</p></div>
+     <div class="hover-div"> <p class="icon-text light"><i class="fas fa-map-marker-alt"></i>LOCATIONS</p></div>
+     <div class="hover-div"> <p class="icon-text light"><i class="fas fa-chart-line"></i>WORKFLOWS</p></div>
+     <div class="hover-div"> <p class="icon-text light"><i class="fas fa-chalkboard-teacher"></i>JOB BOARDS</p></div>
+     <div class="hover-div"> <p class="icon-text light"><i class="fas fa-vector-square"></i>SOCIAL</p></div>
     </div>
     <div class="cats-sidebar sidebar-group">
       <p class="light sidebar-group-header">Categories</p>
-      <div class="hover-div"><p class="categories-text"><i class="fas fa-check-square yellow-square"></i>ADMINISTRATIVE</p></div>
-      <div class="hover-div"><p class="categories-text"><i class="fas fa-square-full blue-square"></i>DESIGN</p></div>
-      <div class="hover-div"><p class="categories-text"><i class="fas fa-square-full red-square"></i>EXECUTIVE</p></div>
-      <div class="hover-div"><p class="categories-text"><i class="fas fa-square-full green-square"></i>HUMAN RESOURCES</p></div>
+      <div class="hover-div"><p class="categories-text light"><i class="fas fa-check-square yellow-square"></i>ADMINISTRATIVE</p></div>
+      <div class="hover-div"><p class="categories-text light"><i class="fas fa-square-full blue-square"></i>DESIGN</p></div>
+      <div class="hover-div"><p class="categories-text light"><i class="fas fa-square-full red-square"></i>EXECUTIVE</p></div>
+      <div class="hover-div"><p class="categories-text light"><i class="fas fa-square-full green-square"></i>HUMAN RESOURCES</p></div>
     </div>
-  </nav>
+  </div>
   <main>
     <div class="search-bar">
-      <button class="sidebar-toggle">
+      <button class="sidebar-toggle" onclick="navControl()">
         <i class="fas fa-caret-left"></i>
         <i class="fas fa-bars"></i>
       </button>
       <i class="fas fa-search"></i>
       <input class="search-input" id="search-input" type="textarea" placeholder="Search for a job, task or resume">
-      <i class="fas fa-user-plus"></i>
-      <i class="fas fa-calendar-check"></i>
-      <i class="fas fa-th"></i>
+      <!-- <div class="searchbar-btns"> -->
+        <i class="fas fa-user-plus user-icon"></i>
+        <i class="fas fa-calendar-check user-icon"></i>
+        <i class="fas fa-th user-icon"></i>
+      <!-- </div> -->
     </div>
     <div class="page-title">
       <article class="title">
         <h1>Customer Service Representative</h1>
         <div class="title-info">
-          <a class="icon-text"><i class="fas fa-map-marker-alt heavy"></i>San Francisco, CA</a>
-          <a class="icon-text"><i class="fas fa-circle"></i>Preview this post</a>
+          <a  href="https://www.google.com/maps/place/San+Francisco,+CA/data=!4m2!3m1!1s0x80859a6d00690021:0x4a501367f076adff?sa=X&ved=2ahUKEwjEr96p58LcAhUIwYMKHSppCgYQ8gEwAHoECAQQAQ" target="_blank" class="title-info-text1 light"><i class="fas fa-map-marker-alt heavy"></i>San Francisco, CA</a>
+          <a class="title-info-text2 light"><i class="fas fa-circle fas fa-circle1"></i>Preview this post</a>
         </div>
       </article>
-      <nav class="title-nav">
-        <a class="icon-text"><i class="fas fa-circle"></i>Open</a>
-        <i class="fas fa-bookmark"></i>
-        <i class="fas fa-pen-alt"></i>
-        <i class="fas fa-trash-alt"></i>
-      </nav>
+      <div class="title-nav">
+        <div class="open-btn"><a class="title-icon-text"><i class="fas fa-circle fas fa-circle2"></i>OPEN</a></div>
+        <a class="title-icons"><i class="fas fa-bookmark"></i></a>
+        <a class="title-icons"><i class="fas fa-pen-alt"></i></a>
+        <a class="title-icons"><i class="fas fa-trash-alt"></i></a>
+      </div>
     </div>
     <section class="user-pages">
       <nav class="page-selection">
-        <a class="page-nav heavy">SUMMARY</a>
+        <a class="page-nav light">SUMMARY</a>
         <a class="page-nav light">APPLICANTS</a>
         <a class="page-nav light">JOB BOARD</a>
         <a class="page-nav light">INTERVIEWS</a>
@@ -87,7 +90,7 @@
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <path class="circle"
-                    stroke-dasharray="30, 100"
+                    stroke-dasharray="90, 100"
                     d="M18 33.9155
                       a 15.9155 15.9155 0 0 1 0 -31.831
                       a 15.9155 15.9155 0 0 1 0 31.831"
@@ -123,7 +126,7 @@
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <path class="circle"
-                    stroke-dasharray="90, 100"
+                    stroke-dasharray="30, 100"
                     d="M18 33.9155
                       a 15.9155 15.9155 0 0 1 0 -31.831
                       a 15.9155 15.9155 0 0 1 0 31.831"
@@ -133,7 +136,7 @@
                 </svg>
               </div>
             </div>
-            <p class="stat-label light">TOTALS - Out of 5,231 views</p>
+            <p class="stat-label light">TOTALS<i class="fas fa-circle fas fa-circle3"></i>Out of <span class="total-views">5,231</span> views</p>
         </div>
         <div class="graph-box">
           <div class="interactive-graph">
@@ -146,16 +149,68 @@
                 <div id="chart_div1" class="graph"></div>
               </div>
             </div>
-            <p class="graph-label light">Applicants/Day</p>
+            <p class="graph-label light">APPLICANTS/DAY</p>
           </div>
         </div>
       </div>
     </section>
     <section class="user-overview">
-      <div class="user-info">
+      <div class="page-break-toggle">
+        <hr class="line-break-hr"><a class="page-break-circle"><i class="fas fa-chevron-up"></i></a><hr class="line-break-hr">
       </div>
-      <div class="sharing">
-      </div>
+      <section class="info-and-sharing">
+        <div class="user-info">
+          <p class="position-info">JOB DESCRIPTION</p>
+          <p class="entered-info">Lorem Ipsum Jargon</p>
+          <p class="position-info">POSITION TITLE</p>
+          <p class="entered-info">Customer Service Representative</p>
+          <p class="position-info">LOCATION</p>
+          <p class="entered-info">San Fransisco, CA</p>
+          <p class="position-info">EMPLOYMENT TYPE</p>
+          <p class="entered-info">Full-time</p>
+          <p class="position-info">EXPERIENCE</p>
+          <p class="entered-info">Mid-level</p>
+          <p class="position-info">STATUS</p>
+          <p class="entered-info">Open</p>
+          <p class="position-info">DESCRIPTION</p>
+          <p class="entered-info">Lorem ipsum dolor sit amet, consequat persecuti liberavisse cu quo, temporibus liberavisse eu eos. Quo corpora persecuti ex. Amet postea ancillae et mel. Ut sea constituam ullamcorper, libris nemore no vix. Mel vero elitr no, ius an platonem prodesset democritum. Ipsum constituam referrentur mel eu, est no quem causae theophrastus.</p>
+          <p class="position-info">HIRING LEAD</p>
+          <p class="entered-info"><img class="frankie2" src="files/frankie-face.png">Tom Tizzy</p>
+
+          <p class="position-info">APPROVED SALLARY</p>
+          <p class="entered-info">$58,000</p>
+
+        </div>
+        <div class="sharing">
+          <p class="facebook share-btn"><i class="fab fa-facebook-f"></i>Post to Facebook</p>
+          <p class="twitter share-btn"><i class="fab fa-twitter"></i>Tweet this Job</p>
+          <p class="linkedin share-btn"><i class="fab fa-linkedin"></i>Post to Linkedin</p>
+          <article class="share-options">
+            <h4 class="share-instructions">Link to this Job</h4>
+            <p class="share-instructions-info">Lorem ipsum dolor sit amet, consequat persecuti liberavisse cu quo, temporibus liberavisse eu eos.</p>
+            <form class="link-form">
+              <a class="link-text">http://www.blindtextgenerator.com/lorem-ipsum</a>
+              <button class="link-btn">Copy</button>
+            </form>
+          </article>
+          <article class="share-options">
+            <h4 class="share-instructions">Link to this Job</h4>
+            <p class="share-instructions-info">Lorem ipsum dolor sit amet, consequat persecuti liberavisse cu quo, temporibus liberavisse eu eos.</p>
+            <form class="link-form">
+              <a class="link-text">http://www.blindtextgenerator.com/lorem-ipsum</a>
+              <button class="link-btn">Copy</button>
+            </form>
+          </article>
+          <article class="share-options">
+            <h4 class="share-instructions">Link to this Job</h4>
+            <p class="share-instructions-info">Lorem ipsum dolor sit amet, consequat persecuti liberavisse cu quo, temporibus liberavisse eu eos.</p>
+            <form class="link-form">
+              <a class="link-text">http://www.blindtextgenerator.com/lorem-ipsum</a>
+              <button class="link-btn">Copy</button>
+            </form>
+          </article>
+        </div>
+      </section>
     </section>
 
 
