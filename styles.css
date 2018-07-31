@@ -9,6 +9,10 @@ body {
     /*grid-template-columns: 200px 1fr;*/
 }
 
+main {
+  transition: 0.5s;
+}
+
 .light {
   color: #A1ABBE;
 }
@@ -28,24 +32,6 @@ body {
     transition: 0.5s;
 /*    display: flex;
     flex-direction: column;*/
-}
-
-.sidebar {
-
-}
-
-.sidebar .closebtn {
-  color: #A1ABBE;
-
-    position: absolute;
-    top: -5px;
-    left: 170px;
-    font-size: 36px;
-    text-decoration: none;
-}
-
-.sidebar .closebtn:hover {
-  color: white;
 }
 
 .profile-photo {
@@ -124,8 +110,6 @@ body {
   position: relative;
   top: 3px;
 }
-
-
 
 .profile-photo {
   border-bottom: solid;
@@ -305,6 +289,11 @@ li {
   position: relative;
   top: 9px;
   right: 9px;
+}
+
+/*Hidden page break*/
+.hidden-page-break {
+  display: none;
 }
 
 
@@ -491,7 +480,7 @@ li {
   display: flex;
   justify-content: space-around;
   width: 90%;
-  margin: auto;
+  margin: auto auto 30px;
   background-color: #ECF2F6;
 }
 
@@ -528,37 +517,82 @@ li {
 
 .info-and-sharing {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 70% 280px;
+  grid-gap: 40px;
   justify-content: space-around;
-  width: 95%;
-  border: solid;
+  width: 75%;
   margin: auto;
 }
 
 /*user info*/
 
 .user-info {
-  /*width: 60%;*/
   display: flex;
   flex-wrap: wrap;
+  background: #FFFFFF;
+}
+
+.position-info,
+.entered-info {
+  font-size: .8em;
+  color: #7a8a9f;
+}
+
+.edit-btn {
+  display: none;
+}
+
+.user-info-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: contain;
+}
+
+.user-info-box:hover {
+  background-color: #6f7e94;
+}
+
+
+.user-info-box:hover .position-info {
+  background-color: #6f7e94;
+  color: #FFFFFF;
+}
+
+.user-info-box:hover .entered-info {
+  background-color: #6f7e94;
+  color: #FFFFFF;
+}
+
+.user-info-box:hover .position-page-break {
+  margin-top: 0
+}
+
+.position-page-break {
+  border: solid 1px #ECF2F6;
+  display: block;
+  width: 90%;
 }
 
 .position-info {
-  border: solid;
-  border-width: .5px;  
-  margin-right: 0 10px;
+  font-weight: bold; 
   margin: 10px 0;
   width: 35%;
   min-width: 150px;
-  height: 40px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
 }
 
 .entered-info {
-    border: solid;
-    border-width: .5px;
     margin: 10px 0;
     width: 60%;
     min-width: 320px;
+    resize: none;
+    height: 50%;
+    padding-top: 22px;
+    border: none;
+    overflow: scroll;
 }
 
 .frankie2 {
@@ -569,25 +603,54 @@ li {
 
 /*sharing*/
 
-.sharing {
+/*.sharing {
     border: solid;
     border-width: .5px;
-}
+}*/
 
 .share-btn {
-  height: 40px;
-  width: 90%;
+  height: 50px;
+  line-height: 50px;
+  width: 280px;
   margin: 10px auto;
-  background-color: blue;
-  border-radius: 2px;
+  border-radius: 3px;
   text-align: center;
-  padding-top: 10px;
+  color: #FFFFFF;
 }
 
+.facebook {
+  background-color: #4c72bf;
+}
 
+.twitter {
+  background-color: #1cacec;
+}
 
+.linkedin {
+  background-color: #1683bb;
+}
 
+.fa-facebook-f {
+  position: relative;
+  right: 47px;
+}
 
+.fa-linkedin {
+  position: relative;
+  right: 50px;
+}
+
+.fa-twitter {
+  position: relative;
+  right: 56px;
+}
+
+.link-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 280px;
+}
 
 
 
@@ -629,14 +692,42 @@ li {
 }
 
 
-/*@media (max-width: 900px) {
+@media (max-width: 900px) {
 
   .page-title {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 
-}*/
+  .title {
+      display: flex;
+      flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .title-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hidden-page-break {
+    display: block;
+    width: 40%;
+    color: #ecf2f6;
+    border: solid .5px;
+  }
+
+  .page-selection {
+    text-align: center;
+    padding: 0;
+  }
+
+}
 
 
 @media (max-width: 839px) {
@@ -664,7 +755,23 @@ li {
 
 
 
+@media (max-width: 800px) {
 
+  .page-selection {
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+  }
+
+  .page-nav {
+    margin: auto 20px 10px;
+    padding: 0;
+  }
+
+}
 
 
 
