@@ -5,8 +5,6 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    /*display: grid;*/
-    /*grid-template-columns: 200px 1fr;*/
     background-color: #354052;
 }
 
@@ -30,7 +28,6 @@ main {
     top: 0;
     left: 0;
     bottom: 0;
-    /*overflow-x: visible;*/
     transition: 0.5s;
 }
 
@@ -146,7 +143,6 @@ main {
 .search-bar {
   display: flex;
   height: 70px;
-  /*border-bottom: solid .1px #A2AAB7;*/
   background-color: #FFFFFF;
 }
 
@@ -185,12 +181,6 @@ button.sidebar-toggle {
 .sidebar-toggle:hover .fa-bars {
   color: #A1ABBE;
 }
-
-/*.fa-search {
-  margin-top: 28px;
-  margin-right: 30px;
-  border-bottom: solid .1px #A2AAB7;
-}*/
 
 .search-input {
   height: 67.5px;
@@ -400,13 +390,10 @@ li {
 
 .summary-page {
   max-height: 100%;
-  /*display: grid;*/
-  /*grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));*/
   padding-bottom: 50px;
 }
 
 .page-nav {
-  /*border-bottom: solid 3px #FFFFFF;*/
   margin: 0 10px;
   font-size: .65em;
   height: 40px;
@@ -416,7 +403,6 @@ li {
 
 .page-nav:hover {
   color: black;
-  /*background-color: #26A6F7;*/
   border-bottom: solid 3px #26a6f7;
 }
 
@@ -509,7 +495,6 @@ li {
 /*The graph lives mostly in the js*/
 
 .graph-box {
-  /*width: 400px;*/
   margin-right: 40px;
 }
 
@@ -543,7 +528,6 @@ li {
 .graph-label {
   align-self: center;
   text-align: center;
-  margin-bottom: -25px;
   background-color: #FFFFFF;
   border: solid 1px #d2dae1;
   border-radius: 25px;
@@ -614,6 +598,7 @@ li {
 .user-overview {
   margin: 0;
   background-color: #ECF2F6;
+  padding: 0 15px;
 }
 
 .info-and-sharing {
@@ -642,7 +627,33 @@ li {
 }
 
 .edit-btn {
-  display: none;
+  background-color: #7d8da5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 30px;
+  margin-top: 25px;
+  font-size: .8em;
+  font-weight: bold;
+  width: 90px;
+  text-align: center;
+}
+
+.fa-pencil-alt {
+  margin: auto 15px auto 0;
+  color: white;
+}
+
+.fa-pencil-alt::before {
+  margin: 0;
+}
+
+.info-box-dark {
+  background-color: #6f7f94;
+}
+
+.position1 {
+  color: #FFFFFF;
 }
 
 .user-info-box {
@@ -652,21 +663,6 @@ li {
   box-sizing: contain;
   border-radius: 3px;
 }
-
-/*.user-info-box:hover {
-  background-color: #6f7e94;
-}*/
-
-/*
-.user-info-box:hover .position-info {
-  background-color: #6f7e94;
-  color: #FFFFFF;
-}*/
-
-/*.user-info-box:hover .entered-info {
-  background-color: #6f7e94;
-  color: #FFFFFF;
-}*/
 
 .user-info-box:hover .position-page-break {
   margin-top: 0
@@ -681,14 +677,14 @@ li {
 .position-info {
   font-weight: bold; 
   margin: 10px 0 auto 30px;
-  width: 35%;
+  width: 25%;
   min-width: 150px;
   height: 60px;
   line-height: 60px;
 }
 
 .entered-info {
-    margin: 10px 0 auto 30px;
+    margin: 10px 0 auto;
     width: 50%;
     resize: none;
     padding-bottom: 20px;
@@ -705,16 +701,11 @@ li {
 
 /*sharing*/
 
-/*.sharing {
-    border: solid;
-    border-width: .5px;
-}*/
-
 .share-btn {
   height: 50px;
   line-height: 50px;
   width: 280px;
-  margin: 10px auto;
+  margin: 20px auto;
   border-radius: 3px;
   text-align: center;
   color: #FFFFFF;
@@ -722,6 +713,7 @@ li {
 
 .facebook {
   background-color: #4c72bf;
+  margin-top: 0;
 }
 
 .twitter {
@@ -730,6 +722,7 @@ li {
 
 .linkedin {
   background-color: #1683bb;
+  margin-bottom: 45px;
 }
 
 .facebook:hover,
@@ -756,7 +749,7 @@ li {
 
 .share-options {
   width: 280px;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 .fa-globe-americas::before,
@@ -773,6 +766,7 @@ li {
 
 .share-instructions-info {
   font-size: .8em;
+  margin-bottom: 20px;
 }
 
 .link-form {
@@ -807,6 +801,12 @@ li {
   filter: brightness(80%);
 }
 
+.sharing-break {
+  width: 90%;
+  border-color: #d2dae1;
+  border-width: .5px;
+}
+
 
 /*------------MEDIA QUERIES------------*/
 
@@ -818,7 +818,6 @@ li {
   }
     .stat-charts {
     justify-content: center;
-    /*width: 50%;*/
   }
 
   .flex-wrapper {
@@ -969,11 +968,9 @@ li {
 
   .flex-wrapper {
     justify-content: space-around;
-    /*margin: 0 40px;*/
   }
 
   .stat-charts {
-    /*width: 100%;*/
     align-self: center;
   }
 
@@ -984,10 +981,6 @@ li {
   .sharing {
     flex-direction: column-reverse;
   }
-
-/*  .share-options {
-    width: 65%;
-  }*/
 
   .link-form {
     width: 100%;
@@ -1030,15 +1023,6 @@ li {
     justify-content: center;
   }
 
-/*  .position-info,
-  .entered-info {
-    text-align: center;
-  }*/
-
-  .entered-info {
-    padding-top: 0;
-  }
-
 }
 
 @media (max-width: 759px) {
@@ -1046,6 +1030,10 @@ li {
   .position-info {
     text-align: center;
     margin: 0;
+  }
+
+  .edit-btn {
+    margin-top: 15px;
   }
 
   .entered-info {
@@ -1061,81 +1049,11 @@ li {
 
 }
 
-/*
-@media (max-width: 653px) {
-
-  .sidebar {
-    width: 100%;
-    position: static;
-    height: 100%;
-    margin: 0;
-  }
-
-  .sidebar-group {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .sidebar-group-header {
-    grid-column: 1 / -1;
-    margin: 10px auto;
-    width: 100%;
-    text-align: center;
-  }
-
-  .hover-div {
-    display: flex; 
-    justify-content: center;
-  }
-
-  button.sidebar-toggle {
-    display: none;
-    width: 80px;
-  }
-
-  .graph {
-    width: 200%;
-  }
-
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100vw;
-  }
-
-  main {
-    margin: 0;
-  }
-
-  .search-input {
-    min-width: 80px;
-    max-width: 50%;
-  }
-
-}*/
-
-
-@media (max-width: 568px) {
-/*  .share-options {
-    width: 65%;
-  }*/
-}
-
 @media (max-width: 505px) {
 
   .share-instructions {
     font-size: .8em;
   }
-
-/*  .share-options {
-    width: 75%;
-  }
-
-  .share-btn {
-    width: 80%;
-  }*/
 
 }
 
@@ -1218,6 +1136,10 @@ li {
 
   .graph {
     width: 200px;
+  }
+
+  .share-btn {
+    width: 90%;
   }
 
 }

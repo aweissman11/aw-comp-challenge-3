@@ -47,8 +47,6 @@ function drawChart1() {
     bar: {groupWidth: "45%"},
     isStacked: true,
     vAxis: { format: 'decimal', ticks: [ 0, 100, 200, 300, 400, 500 ]},
-    // width: {100%},
-    // vAxis: { gridlines.units: { 0, 100, 200, 300, 400, 500 } },
  };
 
 var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
@@ -58,57 +56,10 @@ var chart = new google.visualization.ColumnChart(document.getElementById('chart_
 
 function createCustomHTMLContent(dayOfWeek, date, applicantTotal, interviewTotal) {
   return '<p class="tool-tip">' + dayOfWeek + ', July ' 
-  + date + ', 2018<br /><span class="applicant-total">' + applicantTotal 
-  + '</span> Applicants / <span class="interview-total>' 
-  + interviewTotal + '</span> Interviews</p>'
+          + date + ', 2018<br /><span class="applicant-total">' + applicantTotal 
+          + '</span> Applicants / <span class="interview-total">' 
+          + interviewTotal + '</span> Interviews</p>';
 }
-
-// $('.icon-text').mouseenter(sidebarHoverEffects);
-// function sidebarHoverEffects() {
-//     $( event.target ).closest('.icon-text').css("color", "#FFFFFF");
-//     $( event.target ).children().css("color", "#FFFFFF");
-//     $( event.target ).parent().css("border-left", "solid #26A6F7");
-//     $( event.target ).parent().css( "background-color", "#303949");
-//   }
-
-// $('.icon-text').mouseout(hoverEffectsOff);
-// function hoverEffectsOff() {
-//     $( event.target ).closest('.icon-text').css("color", "#A1ABBE");
-//     $( event.target ).children().css("color", "#A1ABBE");
-//     $( event.target ).parent().css("border-left", "none");
-//     $( event.target ).parent().css( "background-color", "#354052");
-//   }
-
-// // $('.sidebar-toggle').mouseenter(userIconHoverEffects);
-// $('.user-icon').mouseenter(userIconHoverEffects);
-// function userIconHoverEffects() {
-//     $( event.target ).closest('.user-icon').css("color", "#FFFFFF");
-//     $( event.target ).css( "background-color", "#26A6F7");
-//   }
-
-// // $('.sidebar-toggle').mouseout(userIconHoverEffects);
-// $('.user-icon').mouseout(userIconHoverEffectsOff);
-// function userIconHoverEffectsOff() {
-//     $( event.target ).closest('.user-icon').css("color", "#A1ABBE");
-//     $( event.target ).css( "background-color", "#FFFFFF");
-//     $( event.target ).css( "border-bottom", "solid .1px #A2AAB7"); 
-//   }
-
-// $('.page-nav').mouseenter(pageNavHoverEffects);
-// function pageNavHoverEffects() {
-//     $( event.target ).closest('.page-nav').css("color", "black");
-//     // $( event.target ).css( "background-color", "#26A6F7");
-//     $( event.target ).css( "border-bottom", "solid 3px #26a6f7"); 
-//   }
-
-// // $('.sidebar-toggle').mouseout(userIconHoverEffects);
-// $('.page-nav').mouseout(pageNavHoverEffectsOff);
-// function pageNavHoverEffectsOff() {
-//     $( event.target ).closest('.page-nav').css("color", "#A1ABBE");
-//     // $( event.target ).css( "background-color", "#FFFFFF");
-//     $( event.target ).css( "border-bottom", "none"); 
-//   }
-
 
 var jmediaqueryMobile = window.matchMedia( "(max-width: 654px)" );
 jmediaqueryMobile.addListener(handleOrientationChange);
@@ -139,6 +90,7 @@ function handleOrientationChange(jmediaqueryMobile) {
         sidebarGroupHeader.css('margin', '10px auto');
         sidebarGroupHeader.css('text-align', 'center');
         sidebarGroupHeader.css('width', '100%');
+        sidebarGroupHeader.css('color', '#7f89ac')
         hoverDiv.css('display', 'flex');
         hoverDiv.css('justify-content', 'center');
         sidebarToggle.css('display', 'none');
@@ -172,26 +124,19 @@ function handleOrientationChange(jmediaqueryMobile) {
         sidebarDiv.css('top', '0');
         sidebarDiv.css('left', '0');
         sidebarDiv.css('bottom', '0');
-        // sidebarDiv.css('height', '100%');
         sidebarGroup.css('flex-wrap', 'nowrap');
         sidebarGroup.css('flex-direction', 'column');
         sidebarGroup.css('justify-content', 'flex-start');
         sidebarGroupHeader.css('margin', '30px 15px 10px');
         sidebarGroupHeader.css('text-align', 'left');
-        // sidebarGroupHeader.css('width', '100%');
         hoverDiv.css('display', 'block');
-        // hoverDiv.css('justify-content', 'center');
         sidebarToggle.css('display', 'block');
         sidebarToggle.css('width', '80px');
         graphVar.css('width', '400px');
         searchInput.css('min-width', '100%');
-        // sidedbarOut = !sidedbarOut;
         navControlSide();
     }
 }
-
-
-
 
 var sidedbarOut = false;
 
@@ -209,12 +154,6 @@ function navControlSide() {
         mainSection.css('margin-left', '200px');
         sidedbarOut = !sidedbarOut;
     }
-}
-
-
-
-
-function navControlTop() {
 }
 
 
