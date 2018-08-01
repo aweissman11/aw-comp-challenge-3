@@ -2,6 +2,4 @@
 Third Static Comp Challenge
 
 
-Little To Dos:
-Categories Sidebar section should click and check???
-search icon inside search input
+![alt text](http://frontend.turing.io/assets/images/static-comp-challenge-3.jpg)
