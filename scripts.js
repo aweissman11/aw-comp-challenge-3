@@ -1,22 +1,7 @@
 
-
-var day1 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
-var day2 = createCustomHTMLContent('Monday', '23rd', 220, 22);
-var day3 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
-var day4 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
-var day5 = createCustomHTMLContent('Thursday', '26th', 190, 19);
-var day6 = createCustomHTMLContent('Friday', '27th', 210, 21);
-var day7 = createCustomHTMLContent('Saturday', '28th', 100, 10);    
-var day8 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
-var day9 = createCustomHTMLContent('Monday', '23rd', 220, 22);
-var day10 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
-var day11 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
-var day12 = createCustomHTMLContent('Thursday', '26th', 190, 19);
-var day13 = createCustomHTMLContent('Friday', '27th', 210, 21);
-var day14 = createCustomHTMLContent('Saturday', '28th', 100, 10);
-
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart1);
+
 function drawChart1() {
   var data = google.visualization.arrayToDataTable([
     ['Day', 'applicants', {'type': 'string', 'role': 'tooltip', 'p': {'html': true}}, 'stack', {'type': 'string', 'role': 'tooltip', 'p': {'html': true}}],
@@ -47,7 +32,7 @@ function drawChart1() {
     bar: {groupWidth: "45%"},
     isStacked: true,
     vAxis: { format: 'decimal', ticks: [ 0, 100, 200, 300, 400, 500 ]},
- };
+};
 
 var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
   chart.draw(data, options);
@@ -60,6 +45,21 @@ function createCustomHTMLContent(dayOfWeek, date, applicantTotal, interviewTotal
           + '</span> Applicants / <span class="interview-total">' 
           + interviewTotal + '</span> Interviews</p>';
 }
+
+var day1 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
+var day2 = createCustomHTMLContent('Monday', '23rd', 220, 22);
+var day3 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
+var day4 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
+var day5 = createCustomHTMLContent('Thursday', '26th', 190, 19);
+var day6 = createCustomHTMLContent('Friday', '27th', 210, 21);
+var day7 = createCustomHTMLContent('Saturday', '28th', 100, 10);    
+var day8 = createCustomHTMLContent('Sunday', '22nd', 20, 2);
+var day9 = createCustomHTMLContent('Monday', '23rd', 220, 22);
+var day10 = createCustomHTMLContent('Tuesday', '24th', 290, 29);
+var day11 = createCustomHTMLContent('Wednesday', '25th', 360, 36);
+var day12 = createCustomHTMLContent('Thursday', '26th', 190, 19);
+var day13 = createCustomHTMLContent('Friday', '27th', 210, 21);
+var day14 = createCustomHTMLContent('Saturday', '28th', 100, 10);
 
 var jmediaqueryMobile = window.matchMedia( "(max-width: 654px)" );
 jmediaqueryMobile.addListener(handleOrientationChange);
@@ -138,6 +138,9 @@ function handleOrientationChange(jmediaqueryMobile) {
     }
 }
 
+
+
+
 var sidedbarOut = false;
 
 function navControlSide() {
@@ -158,6 +161,23 @@ function navControlSide() {
 
 
 
+
+var editBtn = $('.edit-btn');
+editBtn.on('click', editUserContent);
+var enteredInfo = $('.entered-info');
+truthiness = true;
+
+function editUserContent() {
+    if (truthiness == true) {
+        console.log('if')
+        enteredInfo.attr('contenteditable', 'true');
+        truthiness = !truthiness;
+    } else {
+        console.log('else');
+        enteredInfo.attr('contenteditable', 'false');
+        truthiness = !truthiness;
+    }
+}
 
 
 
